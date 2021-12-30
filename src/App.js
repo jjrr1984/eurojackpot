@@ -13,6 +13,7 @@ function App() {
   const [lastDate, setLastDate] = useState(null);
   const [regularNumbers, setRegularNumbers] = useState([]);
   const [specialNumbers, setSpecialNumbers] = useState([]);
+  const [lastOdds, setOdds] = useState(null);
 
   useEffect(() => {
     setIsFetching(true);
@@ -31,11 +32,13 @@ function App() {
           const {
             drawingDate,
             numbers,
-            euroNumbers
+            euroNumbers,
+            odds
           } = results.last;
           setLastDate(drawingDate);
           setRegularNumbers(numbers);
           setSpecialNumbers(euroNumbers);
+          setOdds(odds);
         })
         .catch(function (error) {
           // handle error
@@ -59,7 +62,8 @@ function App() {
       <Numbers
         standardNumbers={regularNumbers}
         specialNumbers={specialNumbers} />
-      <Prices />
+      <Prices
+        odds={lastOdds} />
     </div>
   );
 }
