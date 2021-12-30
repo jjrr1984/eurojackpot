@@ -3,4 +3,12 @@
   flex-flow: column;
   align-items:center;
   padding-top: 2rem;
+  min-height: 20rem;
+}
+
+.isLoading{
+  background-image: url(./spinner.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
 }

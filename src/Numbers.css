@@ -1,0 +1,21 @@
+.numbers{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.standardNumbers{
+    display: flex;
+    flex-flow: row;
+    color: blue;
+}
+
+.specialNumbers{
+    display: flex;
+    flex-flow: row;
+    color: green;
+}
+
+.sn,.sp{
+    padding: 1rem;
+}
