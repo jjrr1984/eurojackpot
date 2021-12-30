@@ -34,6 +34,8 @@ function Prizes({
                     {
                         odds && positions.map((position) => {
                             const { winners, prize } = odds[`rank${position}`];
+                            const formattedWinners = new Intl.NumberFormat('en-GB', { maximumSignificantDigits: 3 }).format(winners);
+                            const formattedPrize = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR' }).format(prize);
                             return (
                                 <tr key={`row-${position}`}>
                                     <td>
@@ -43,10 +45,10 @@ function Prizes({
                                         {combinations[position - 1]}
                                     </td>
                                     <td>
-                                        {winners}
+                                        {formattedWinners}
                                     </td>
                                     <td>
-                                        {`${prize} €`}
+                                        {formattedPrize}
                                     </td>
                                 </tr>
                             );
