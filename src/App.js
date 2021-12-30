@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import data from "./data.js";
 import classNames from "classnames";
+import Footer from "./Footer";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
   const [regularNumbers, setRegularNumbers] = useState([]);
   const [specialNumbers, setSpecialNumbers] = useState([]);
   const [lastOdds, setOdds] = useState(null);
+  const [nextDate, setNextDate] = useState(null);
 
   useEffect(() => {
     setIsFetching(true);
@@ -35,10 +37,12 @@ function App() {
             euroNumbers,
             odds
           } = results.last;
+          const nextDrawingDate = results.next.drawingDate;
           setLastDate(drawingDate.split(",")[0]);
           setRegularNumbers(numbers);
           setSpecialNumbers(euroNumbers);
           setOdds(odds);
+          setNextDate(nextDrawingDate.split(",")[0]);
         })
         .catch(function (error) {
           // handle error
@@ -64,6 +68,7 @@ function App() {
         specialNumbers={specialNumbers} />
       <Prizes
         odds={lastOdds} />
+      <Footer nextDate={nextDate} />
     </div>
   );
 }
