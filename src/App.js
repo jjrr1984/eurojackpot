@@ -35,7 +35,7 @@ function App() {
             euroNumbers,
             odds
           } = results.last;
-          setLastDate(drawingDate);
+          setLastDate(drawingDate.split(",")[0]);
           setRegularNumbers(numbers);
           setSpecialNumbers(euroNumbers);
           setOdds(odds);
