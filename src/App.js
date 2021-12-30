@@ -1,7 +1,7 @@
 import './App.css';
 import Title from "./Title";
 import Numbers from './Numbers';
-import Prices from './Prices';
+import Prizes from './Prizes';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import data from "./data.js";
@@ -62,7 +62,7 @@ function App() {
       <Numbers
         standardNumbers={regularNumbers}
         specialNumbers={specialNumbers} />
-      <Prices
+      <Prizes
         odds={lastOdds} />
     </div>
   );

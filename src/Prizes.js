@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import combinations from './combinations';
-import "./Prices.css";
+import "./Prizes.css";
 
 
-function Prices({
+function Prizes({
     odds
 }) {
     let positions = [];
@@ -12,7 +12,7 @@ function Prices({
     }
 
     return (
-        <div className="prices">
+        <div className="Prizes">
             <table>
                 <thead>
                     <tr>
@@ -58,8 +58,8 @@ function Prices({
     );
 }
 
-Prices.propTypes = {
+Prizes.propTypes = {
     odds: PropTypes.object
 };
 
-export default Prices;
+export default Prizes;
