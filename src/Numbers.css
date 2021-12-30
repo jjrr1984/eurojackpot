@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: row;
     align-items: center;
+    padding: 2rem 0;
 }
 
 .standardNumbers{
@@ -18,4 +19,12 @@
 
 .sn,.sp{
     padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-left: 2rem;
+}
+
+.separator{
+    margin-left: 2rem;
+    font-size: 2rem;
 }
