@@ -5,16 +5,9 @@
     padding: 2rem 0;
 }
 
-.standardNumbers{
+.standardNumbers,.specialNumbers{
     display: flex;
     flex-flow: row;
-    color: blue;
-}
-
-.specialNumbers{
-    display: flex;
-    flex-flow: row;
-    color: green;
 }
 
 .sn,.sp{
@@ -22,9 +15,24 @@
     border-radius: 50%;
     border: 1px solid;
     margin-left: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.sn{
+    border-color: blue;
+}
+
+.sp{
+    border-color: green;
 }
 
 .separator{
     margin-left: 2rem;
     font-size: 2rem;
+}
+
+.circle-text{
+    margin:auto;
 }

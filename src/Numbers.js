@@ -11,7 +11,9 @@ function Numbers({
                 {standardNumbers.map((number, index) => {
                     return (
                         <div key={`sn-${index}`} className='sn'>
-                            {number}
+                            <div className='circle-text'>
+                                {number}
+                            </div>
                         </div>
                     );
                 })}
@@ -23,7 +25,9 @@ function Numbers({
                 {specialNumbers.map((number, index) => {
                     return (
                         <div key={`sp-${index}`} className='sp'>
-                            {number}
+                            <div className='circle-text'>
+                                {number}
+                            </div>
                         </div>
                     );
                 })}
@@ -33,8 +37,8 @@ function Numbers({
 }
 
 Numbers.propTypes = {
-    standardNumbers: PropTypes.arrayOf(PropTypes.string),
-    specialNumbers: PropTypes.arrayOf(PropTypes.string),
+    standardNumbers: PropTypes.arrayOf(PropTypes.number),
+    specialNumbers: PropTypes.arrayOf(PropTypes.number)
 };
 
 export default Numbers;

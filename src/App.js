@@ -17,6 +17,21 @@ function App() {
   const [lastOdds, setOdds] = useState(null);
   const [nextDate, setNextDate] = useState(null);
 
+  function updateData(results) {
+    const {
+      drawingDate,
+      numbers,
+      euroNumbers,
+      odds
+    } = results.last;
+    const nextDrawingDate = results.next.drawingDate;
+    setLastDate(drawingDate.split(",")[0]);
+    setRegularNumbers(numbers);
+    setSpecialNumbers(euroNumbers);
+    setOdds(odds);
+    setNextDate(nextDrawingDate.split(",")[0]);
+  }
+
   useEffect(() => {
     setIsFetching(true);
     //  Using a bit of timeout to see loading spinner and the app transition
@@ -26,27 +41,20 @@ function App() {
           // handle success
           let results;
           if (typeof response.data !== 'object') {
-            //  We're not getting right data, so we get fake data
+            //  We're not getting right data, so we use mocked data
+            console.log("Using mocked data");
             results = data;
           } else {
             results = response.data;
           }
-          const {
-            drawingDate,
-            numbers,
-            euroNumbers,
-            odds
-          } = results.last;
-          const nextDrawingDate = results.next.drawingDate;
-          setLastDate(drawingDate.split(",")[0]);
-          setRegularNumbers(numbers);
-          setSpecialNumbers(euroNumbers);
-          setOdds(odds);
-          setNextDate(nextDrawingDate.split(",")[0]);
+          updateData(results);
         })
         .catch(function (error) {
           // handle error
           console.log(error);
+          //  Call failed, so we use mocked data
+          console.log("Using mocked data");
+          updateData(data);
         })
         .then(function () {
           // always executed
