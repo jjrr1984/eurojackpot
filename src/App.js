@@ -39,12 +39,16 @@ function App() {
         .then(function (response) {
           // handle success
           let results;
-          if (typeof response.data !== 'object') {
+
+          if ((typeof response.data === 'object') &&
+            response.data.last &&
+            response.data.next
+          ) {
+            results = response.data;
+          } else {
             //  We're not getting right data, so we use mocked data
             console.log("Using mocked data");
             results = data;
-          } else {
-            results = response.data;
           }
           updateData(results);
         })

@@ -4,7 +4,7 @@ import "./Prizes.css";
 
 
 function Prizes({
-    odds
+    odds = null
 }) {
     let positions = [];
     for (let i = 1; i <= 12; i++) {

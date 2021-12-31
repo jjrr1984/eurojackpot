@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import './Numbers.css';
 
 function Numbers({
-    standardNumbers,
-    specialNumbers
+    standardNumbers = [],
+    specialNumbers = []
 }) {
     return (
         <div className='numbers'>

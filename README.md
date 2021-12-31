@@ -18,3 +18,14 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Special notes
+
+- A little delay was included to show the loading animation
+- If API call fails, app uses mocked data
+
+## Possible improvements
+
+- Use redux for global state
+- Use typescript for a better data type checking
+- Use less/sass for smaller css files
