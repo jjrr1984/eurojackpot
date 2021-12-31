@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 function App() {
 
-  const [isFetching, setIsFetching] = useState(false);
+  const [isFetching, setIsFetching] = useState(true);
   const [lastDate, setLastDate] = useState(null);
   const [regularNumbers, setRegularNumbers] = useState([]);
   const [specialNumbers, setSpecialNumbers] = useState([]);
@@ -33,7 +33,6 @@ function App() {
   }
 
   useEffect(() => {
-    setIsFetching(true);
     //  Using a bit of timeout to see loading spinner and the app transition
     setTimeout(function () {
       axios.get('/api/drawings/euroJackpot')
@@ -64,19 +63,23 @@ function App() {
   }, []);
 
   const appClassNames = classNames({
-    "App": true,
+    "App": !isFetching,
     "isLoading": isFetching
   });
 
   return (
     <div className={appClassNames}>
-      <Title lastDate={lastDate} />
-      <Numbers
-        standardNumbers={regularNumbers}
-        specialNumbers={specialNumbers} />
-      <Prizes
-        odds={lastOdds} />
-      <Footer nextDate={nextDate} />
+      {!isFetching && (
+        <>
+          <Title lastDate={lastDate} />
+          <Numbers
+            standardNumbers={regularNumbers}
+            specialNumbers={specialNumbers} />
+          <Prizes
+            odds={lastOdds} />
+          <Footer nextDate={nextDate} />
+        </>
+      )}
     </div>
   );
 }
