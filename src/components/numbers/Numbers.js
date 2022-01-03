@@ -11,20 +11,20 @@ function Numbers({
                 {standardNumbers.map((number, index) => {
                     return (
                         <Ball
-                            index={index}
+                            key={`sn-${index}`}
                             number={number}
                         />
                     );
                 })}
             </div>
-            <div className='separator'>
+            <span className='separator'>
                 +
-            </div>
+            </span>
             <div className='setOfNumbers'>
                 {specialNumbers.map((number, index) => {
                     return (
                         <Ball
-                            index={index}
+                            key={`sp-${index}`}
                             number={number}
                             specialNumber={true}
                         />

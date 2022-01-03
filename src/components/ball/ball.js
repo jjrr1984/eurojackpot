@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import classNames from "classnames";
 
 function Ball({
-    index,
     specialNumber = false,
     number
 }) {
@@ -11,8 +10,9 @@ function Ball({
         'sp': specialNumber,
         'singleNumber': true
     });
+
     return (
-        <div key={`sn-${index}`} className={ballClassNames}>
+        <div className={ballClassNames}>
             <div className='circle-text'>
                 {number}
             </div>
@@ -21,8 +21,7 @@ function Ball({
 }
 
 Ball.propTypes = {
-    index: PropTypes.number.isRequired,
-    specialNumber: PropTypes.bool.isRequired,
+    specialNumber: PropTypes.bool,
     number: PropTypes.number.isRequired
 };
 
