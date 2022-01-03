@@ -1,4 +1,4 @@
-export default {
+const drawings = {
     "last": {
         "nr": 510,
         "currency": "EUR",
@@ -118,4 +118,6 @@ export default {
         "specialMarketingJackpot": "10",
         "climbedSince": 55
     }
-}
+};
+
+export default drawings;

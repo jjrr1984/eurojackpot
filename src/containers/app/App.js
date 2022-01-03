@@ -1,12 +1,14 @@
 import './App.css';
-import Title from "./Title";
-import Numbers from './Numbers';
-import Prizes from './Prizes';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import data from "./data.js";
+import data from "../../data/drawings";
 import classNames from "classnames";
-import Footer from "./Footer";
+import {
+  Title,
+  Numbers,
+  Prizes,
+  Footer
+} from "../../components";
 
 function App() {
 

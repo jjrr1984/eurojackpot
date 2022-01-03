@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import combinations from './combinations';
+import combinations from '../../data/combinations';
 import "./Prizes.css";
 
 
