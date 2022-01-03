@@ -1,0 +1,23 @@
+.singleNumber{
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-left: 2rem;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    color: $number_color;
+    font-family: fantasy;
+
+    &.sn{
+        background: $standard_number_bg;
+    }
+
+    &.sp{
+        background: $special_number_bg;
+    }
+
+    .circle-text{
+        margin:auto;
+    }
+}

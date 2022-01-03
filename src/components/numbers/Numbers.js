@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Ball } from "../";
 
 function Numbers({
     standardNumbers = [],
@@ -9,11 +10,10 @@ function Numbers({
             <div className='setOfNumbers'>
                 {standardNumbers.map((number, index) => {
                     return (
-                        <div key={`sn-${index}`} className='sn singleNumber'>
-                            <div className='circle-text'>
-                                {number}
-                            </div>
-                        </div>
+                        <Ball
+                            index={index}
+                            number={number}
+                        />
                     );
                 })}
             </div>
@@ -23,11 +23,11 @@ function Numbers({
             <div className='setOfNumbers'>
                 {specialNumbers.map((number, index) => {
                     return (
-                        <div key={`sp-${index}`} className='sp singleNumber'>
-                            <div className='circle-text'>
-                                {number}
-                            </div>
-                        </div>
+                        <Ball
+                            index={index}
+                            number={number}
+                            specialNumber={true}
+                        />
                     );
                 })}
             </div>
