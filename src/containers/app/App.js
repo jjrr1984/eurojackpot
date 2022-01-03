@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import data from "../../data/drawings";

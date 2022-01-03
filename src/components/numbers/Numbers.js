@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Numbers.css';
+import './Numbers.scss';
 
 function Numbers({
     standardNumbers = [],
@@ -7,10 +7,10 @@ function Numbers({
 }) {
     return (
         <div className='numbers'>
-            <div className='standardNumbers'>
+            <div className='setOfNumbers'>
                 {standardNumbers.map((number, index) => {
                     return (
-                        <div key={`sn-${index}`} className='sn'>
+                        <div key={`sn-${index}`} className='sn singleNumber'>
                             <div className='circle-text'>
                                 {number}
                             </div>
@@ -21,10 +21,10 @@ function Numbers({
             <div className='separator'>
                 +
             </div>
-            <div className='specialNumbers'>
+            <div className='setOfNumbers'>
                 {specialNumbers.map((number, index) => {
                     return (
-                        <div key={`sp-${index}`} className='sp'>
+                        <div key={`sp-${index}`} className='sp singleNumber'>
                             <div className='circle-text'>
                                 {number}
                             </div>

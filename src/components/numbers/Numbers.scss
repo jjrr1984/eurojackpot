@@ -1,0 +1,40 @@
+.numbers{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding: 2rem 0;
+
+    .setOfNumbers{
+        display: flex;
+        flex-flow: row;
+
+        .singleNumber{
+            padding: 1rem;
+            border-radius: 50%;
+            border: 1px solid;
+            margin-left: 2rem;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            color: white;
+            font-family: fantasy;
+
+            &.sn{
+                background: #bdbdbe;
+            }
+
+            &.sp{
+                background: #ebbf49;
+            }
+
+            .circle-text{
+                margin:auto;
+            }
+        }
+    }
+
+    .separator{
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+}

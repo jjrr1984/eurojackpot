@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import combinations from '../../data/combinations';
-import "./Prizes.css";
+import "./Prizes.scss";
 
 
 function Prizes({
@@ -12,7 +12,7 @@ function Prizes({
     }
 
     return (
-        <div className="Prizes">
+        <div className="prizes">
             <table>
                 <thead>
                     <tr>

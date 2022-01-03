@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import moment from "moment";
-import "./Footer.css";
+import "./Footer.scss";
 
 function Footer({ nextDate }) {
     const parsedDate = moment(nextDate, "DDMMYYYY");
