@@ -1,11 +1,11 @@
 .prizes {
     table{
         border-collapse: collapse;
-        border: 1px solid black;
+        border: 1px solid $table_border_color;
 
-        thead tr{background: rgb(248, 220, 166)};
+        thead tr{background: $header_background};
 
-        tbody tr:nth-child(even) {background: rgb(255, 255, 183)}
+        tbody tr:nth-child(even) {background: $even_rows_background}
 
         th,td{
             padding: 1rem;

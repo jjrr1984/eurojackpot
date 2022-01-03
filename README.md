@@ -27,5 +27,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Possible improvements
 
 - Use redux for global state
-- Use typescript for a better data type checking
-- Use less/sass for smaller css files

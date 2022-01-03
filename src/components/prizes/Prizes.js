@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import combinations from '../../data/combinations';
-import "./Prizes.scss";
-
 
 function Prizes({
     odds = null

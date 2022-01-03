@@ -16,15 +16,15 @@
             width: 25px;
             height: 25px;
             display: flex;
-            color: white;
+            color: $number_color;
             font-family: fantasy;
 
             &.sn{
-                background: #bdbdbe;
+                background: $standard_number_bg;
             }
 
             &.sp{
-                background: #ebbf49;
+                background: $special_number_bg;
             }
 
             .circle-text{
