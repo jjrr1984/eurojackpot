@@ -1,9 +1,24 @@
 .title {
+    display: flex;
+    flex-flow: row;
+    @include small{
+        flex-flow: column;
+        align-items: center;
+    }
     .title-fixed-part{
-        color: $title_fixed_part_color;
+        color: $title_fixed_part_color;        
+        @include small{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
     
     .date{
-        padding-left: 1rem;
+        padding-left: 1rem;       
+        @include small{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 0;
+        }
     }
 }

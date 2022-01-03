@@ -9,6 +9,12 @@
     color: $number_color;
     font-family: fantasy;
 
+    @include small{
+        margin-left: 0.5rem;
+        width: 15px;
+        height: 15px;        
+    }
+
     &.sn{
         background: $standard_number_bg;
     }

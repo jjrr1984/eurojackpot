@@ -17,9 +17,9 @@ function Numbers({
                     );
                 })}
             </div>
-            <span className='separator'>
+            <div className='separator'>
                 +
-            </span>
+            </div>
             <div className='setOfNumbers'>
                 {specialNumbers.map((number, index) => {
                     return (

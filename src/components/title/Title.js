@@ -7,12 +7,12 @@ function Title(
     const parsedDate = lastDate ? moment(lastDate, "DDMMYYYY") : null;
     const formattedDate = parsedDate ? moment(parsedDate).format("dddd DD MMM YYYY") : null;
     return (
-        <span className='title'>
-            <span className='title-fixed-part'>Eurojackpot results for</span>
+        <div className='title'>
+            <div className='title-fixed-part'>Eurojackpot results for</div>
             {formattedDate && (
-                <span className='date'>{formattedDate}</span>
+                <div className='date'>{formattedDate}</div>
             )}
-        </span>
+        </div>
     );
 }
 

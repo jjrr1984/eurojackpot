@@ -3,6 +3,9 @@
     flex-flow: row;
     align-items: center;
     padding: 2rem 0;
+    @include small{
+        flex-flow: column;
+    }
 
     .setOfNumbers{
         display: flex;
@@ -12,5 +15,8 @@
     .separator{
         margin-left: 2rem;
         font-size: 2rem;
+        @include small{
+            margin-left: 0;
+        }
     }
 }
