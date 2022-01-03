@@ -1,7 +1,28 @@
 .footer{
     padding-top: 2rem;
+    display: flex;
+    flex-flow: row;
+
+    @include small{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .footer-fixed-part{
+        @include small{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
     .footer-date{
         color: $footer_date_color;
         padding-left: 2rem;
+
+        @include small{
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 0;
+        }
     }
 }

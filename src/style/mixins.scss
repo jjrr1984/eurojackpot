@@ -3,3 +3,10 @@
         @content;
     }
 }
+
+@mixin extra-small {
+    @media (max-width: 420px){
+        @content;
+    }
+}
+
