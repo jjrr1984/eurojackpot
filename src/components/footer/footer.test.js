@@ -9,7 +9,7 @@ describe('<Footer/>', () => {
     });
 
     it("Component is rendered with filled prop", () => {
-        const component = render(<Footer nextDate="01012022" />);
+        const component = render(<Footer nextDate="01022022" />);
         expect(component.queryByText("Next drawing will be on")).not.toBeNull();
     });
 });

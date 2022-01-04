@@ -24,7 +24,7 @@ function App() {
   });
 
   return (
-    <div className={appClassNames}>
+    <div data-testid="app_main_container" className={appClassNames}>
       {!isFetching && (
         <>
           <Title lastDate={lastDate} />
