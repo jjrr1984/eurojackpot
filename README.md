@@ -2,6 +2,11 @@
 
 This app shows Eurojackpot last drawings and date of next event
 
+## Installation
+
+### `npm i`
+App was tested with node 16.13.1 & npm 8.12
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -9,7 +14,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
 The page will reload when you make changes.\
 
