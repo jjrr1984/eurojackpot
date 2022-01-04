@@ -39,6 +39,10 @@
     "webpack-dev-server": "^4.7.2"
   },
   "scripts": {
-    "start": "webpack serve --env dev --hot"
+    "start": "webpack serve --env dev --hot",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
