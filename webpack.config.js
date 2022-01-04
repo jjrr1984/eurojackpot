@@ -28,7 +28,10 @@ module.exports = {
     },
     devServer: {
         proxy: {
-            '/api': 'https://www.lottoland.com',
+            '/api': {
+                target: 'http://www.lottoland.com',
+                changeOrigin: true
+            }
         }
     }
 };
