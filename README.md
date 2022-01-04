@@ -22,8 +22,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Special notes
 
 - A little delay was included to show the loading animation
-- If API call fails, app uses mocked data
+- It was not possible to make API request work, so if API call fails, app uses mocked data.
 
 ## Possible improvements
 
 - Use redux for global state
+- Use i18n
+- Add accessibility

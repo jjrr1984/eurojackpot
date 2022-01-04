@@ -12,9 +12,9 @@ function Ball({
     });
 
     return (
-        <div className={ballClassNames}>
+        <div data-testid="ball_component" className={ballClassNames}>
             <div className='circle-text'>
-                {number}
+                {number || "?"}
             </div>
         </div>
     );

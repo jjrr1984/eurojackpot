@@ -1,16 +1,3 @@
-const combinations = [
-    "5 numbers + 2 euro numbers",
-    "5 numbers + 1 euro number",
-    "5 numbers + 0 euro numbers",
-    "4 numbers + 2 euro numbers",
-    "4 numbers + 1 euro number",
-    "4 numbers + 0 euro numbers",
-    "3 numbers + 2 euro numbers",
-    "2 numbers + 2 euro numbers",
-    "3 numbers + 1 euro number",
-    "3 numbers + 0 euro numbers",
-    "1 number + 2 euro numbers",
-    "2 numbers + 1 euro number"
-];
+const combinations = ["5,2", "5,1", "5,0", "4,2", "4,1", "4,0", "3,2", "2,2", "3,1", "3,0", "1,2", "2,1"];
 
 export default combinations;

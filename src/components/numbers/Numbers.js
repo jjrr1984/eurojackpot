@@ -5,32 +5,43 @@ function Numbers({
     standardNumbers = [],
     specialNumbers = []
 }) {
+    const validNumbersLength =
+        (standardNumbers.length === 5) &&
+        (specialNumbers.length === 2);
     return (
+
         <div className='numbers'>
-            <div className='setOfNumbers'>
-                {standardNumbers.map((number, index) => {
-                    return (
-                        <Ball
-                            key={`sn-${index}`}
-                            number={number}
-                        />
-                    );
-                })}
-            </div>
-            <div className='separator'>
-                +
-            </div>
-            <div className='setOfNumbers'>
-                {specialNumbers.map((number, index) => {
-                    return (
-                        <Ball
-                            key={`sp-${index}`}
-                            number={number}
-                            specialNumber={true}
-                        />
-                    );
-                })}
-            </div>
+            {validNumbersLength && (
+                <>
+                    <div className='setOfNumbers'>
+                        {standardNumbers.map((number, index) => {
+                            return (
+                                <Ball
+                                    key={`sn-${index}`}
+                                    number={number}
+                                />
+                            );
+                        })}
+                    </div>
+                    <div className='separator'>
+                        +
+                    </div>
+                    <div className='setOfNumbers'>
+                        {specialNumbers.map((number, index) => {
+                            return (
+                                <Ball
+                                    key={`sp-${index}`}
+                                    number={number}
+                                    specialNumber={true}
+                                />
+                            );
+                        })}
+                    </div>
+                </>
+            )}
+            {!validNumbersLength && (
+                <span>Invalid numbers length</span>
+            )}
         </div>
     );
 }

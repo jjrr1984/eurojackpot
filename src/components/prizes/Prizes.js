@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import combinations from '../../data/combinations';
 
+function getCombinationText(combination) {
+    const rightNumbers = combination.split(",")[0];
+    const rightEuroNumbers = combination.split(",")[1];
+    const numbersPluralSuffix = rightNumbers === "1" ? "" : "s";
+    const euroNumbersPluralSuffix = rightEuroNumbers === "1" ? "" : "s";
+    return `${rightNumbers} number${numbersPluralSuffix} + ${rightEuroNumbers} euro number${euroNumbersPluralSuffix}`;
+}
+
 function Prizes({
     odds = null
 }) {
-    let positions = [];
-    for (let i = 1; i <= 12; i++) {
-        positions.push(i);
-    }
-
     return (
         <div className="prizes">
             <table>
@@ -30,17 +33,17 @@ function Prizes({
                 </thead>
                 <tbody>
                     {
-                        odds && positions.map((position) => {
-                            const { winners, prize } = odds[`rank${position}`];
+                        odds && combinations.map((combination, position) => {
+                            const { winners, prize } = odds[`rank${position + 1}`];
                             const formattedWinners = new Intl.NumberFormat('en-GB', { maximumSignificantDigits: 3 }).format(winners);
                             const formattedPrize = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR' }).format(prize);
                             return (
-                                <tr key={`row-${position}`}>
+                                <tr data-testid="prize_data_row" key={`row-${position + 1}`}>
                                     <td>
-                                        {position}
+                                        {position + 1}
                                     </td>
                                     <td>
-                                        {combinations[position - 1]}
+                                        {getCombinationText(combination)}
                                     </td>
                                     <td>
                                         {formattedWinners}
